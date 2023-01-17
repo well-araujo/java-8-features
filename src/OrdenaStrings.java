@@ -15,16 +15,22 @@ public class OrdenaStrings {
 
         Comparator<String> comparador = new ComparadorDeStringPorTamanho();
         //Método Default
+        System.out.println(">>>Uso de Método Default<<<");
         palavras.sort(comparador);
         System.out.println(palavras);
 
         //Forma antiga do Java 7
+        System.out.println(">>>Forma antiga do Java 7<<<");
         for (String palavra: palavras) {
             System.out.println(palavra);
         }
         //foreach, Consumer e interfaces no java.util.functions
+        System.out.println(">>>Com a Interface Consumer<<<");
         Consumer<String> consumidor = new ConsumidorDeString();
         palavras.forEach(consumidor);
+        //Expressão Lambda
+        System.out.println(">>>Com Expressão Lambda<<<");
+        palavras.forEach(s -> System.out.println(s));
     }
 
 }
