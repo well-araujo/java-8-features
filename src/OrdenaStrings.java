@@ -31,6 +31,9 @@ public class OrdenaStrings {
         //Expressão Lambda
         System.out.println(">>>Com Expressão Lambda<<<");
         palavras.forEach(s -> System.out.println(s));
+        //Método References
+        System.out.println(">>>Com Método References<<<");
+        palavras.forEach(System.out::println);
     }
 
 }
